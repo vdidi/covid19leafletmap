@@ -59,7 +59,7 @@
     "serve": "gatsby serve",
     "test": "jest --config ./config/jest.config.js",
     "predeploy": "yarn build",
-    "deploy": "gatsby build && gh-pages -d public -b master"
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "husky": {
     "hooks": {
