@@ -1,8 +1,9 @@
 {
-  "name": "gatsby-starter-leaflet",
-  "description": "A Gatsby starter with Leafet!",
+  "name": "gatsby-starter-leaflet-covid19",
+  "description": "A personalized Gatsby starter with Leafet!",
   "version": "0.2.4",
-  "author": "Colby Fayock <hello@colbyfayock.com>",
+  "author": "Vitor Hugo",
+  "homepage": "https://vdidi.github.io/covid19leafletmap/",
   "dependencies": {
     "axios": "^0.19.2",
     "gatsby": "^2.20.12",
@@ -12,6 +13,7 @@
     "gatsby-plugin-sass": "^2.2.1",
     "gatsby-source-filesystem": "^2.2.2",
     "geojson": "^0.5.0",
+    "gh-pages": "^2.2.0",
     "leaflet": "^1.6.0",
     "node-sass": "^4.13.1",
     "path": "^0.12.7",
@@ -55,7 +57,9 @@
     "lint": "eslint -c ./config/eslint.config.js . --ext .js",
     "start": "yarn develop",
     "serve": "gatsby serve",
-    "test": "jest --config ./config/jest.config.js"
+    "test": "jest --config ./config/jest.config.js",
+    "predeploy": "yarn build",
+    "deploy": "gatsby build && gh-pages -d public -b master"
   },
   "husky": {
     "hooks": {
@@ -70,9 +74,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/colbyfayock/gatsby-starter-leaflet"
-  },
-  "bugs": {
-    "url": "https://github.com/colbyfayock/gatsby-starter-leaflet/issues"
+    "url": "https://https://github.com/vdidi/covid19leafletmap"
   }
 }
